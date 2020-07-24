@@ -1,4 +1,4 @@
-#CPP-Constraint
+# CPP-Constraint
 
 A header only Cpp Port of the python-constraint: https://github.com/python-constraint/python-constraint library. Can be used to solve constraint satisfaction problems. Generally significantly faster than its python variant.
 
