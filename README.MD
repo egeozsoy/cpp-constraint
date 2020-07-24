@@ -25,7 +25,7 @@ Given these constraints, we can model them using the cpp-constraint library.
 You can find the full code in main.cpp
 
 ### Modeling Variables
-```
+```cpp
 struct BackPack {
        std::string name;
        int money;
@@ -53,7 +53,7 @@ struct BackPack {
    };
 ```
 ### Building our constraints
-```
+```cpp
 class MoneyConstraint : public FunctionConstraint<BackPack> {
     static constexpr int fix_money_needed = 100;
 public:
@@ -148,14 +148,14 @@ bool AppleConstraint::func(const std::vector<int> &parms, const std::vector<Prox
     return total_apple >= total_chocolate; // Theoretically this constraint couldn't have been merged to the previous one
 }
 ```
-```
+```cpp
 std::unique_ptr<Constraint<BackPack>> money_constraint = std::make_unique<MoneyConstraint>();
 std::unique_ptr<Constraint<BackPack>> water_constraint = std::make_unique<WaterConstraint>();
 std::unique_ptr<Constraint<BackPack>> chocolate_constraint = std::make_unique<ChocolateConstraint>();
 std::unique_ptr<Constraint<BackPack>> apple_constraint = std::make_unique<AppleConstraint>();
 ```
 ### Defining the Problem
-```
+```cpp
 Problem<BackPack> problem;
 problem.add_variables(backpacks, {0, 1});
 problem.add_constraint(std::move(money_constraint), backpacks);
@@ -164,12 +164,12 @@ problem.add_constraint(std::move(chocolate_constraint), backpacks);
 problem.add_constraint(std::move(apple_constraint), backpacks);
 ```
 ### Solving the Problem
-```
+```cpp
 auto solutions = problem.get_solutions();
 std::cout << solutions.size() << std::endl;
 ```
 ### Outputting the Solutions
-```
+```cpp
 for (size_t i = 0; i < 10; ++i) {
         if (i >= solutions.size()) {
             break;
