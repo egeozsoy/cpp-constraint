@@ -1,6 +1,6 @@
 # CPP-Constraint
 
-A header only Cpp Port of the python-constraint: https://github.com/python-constraint/python-constraint library. Can be used to solve constraint satisfaction problems. Generally significantly faster than its python variant.
+A header only CPP Port of the python-constraint: https://github.com/python-constraint/python-constraint library. Can be used to solve constraint satisfaction problems. Generally significantly faster than its python variant.
 
 ## Usage
 Just copy the constraint.hpp file to a desired location and import it via `#include "constraint.hpp"`
