@@ -20,7 +20,9 @@ Constraint 3: At least 3 chocolate
 Constraint 4: At least as many apples as chocolate
 
 We assign a name to each bag to keep track of them...
-Given these constraints, we can model them using the cpp-constraint library
+Given these constraints, we can model them using the cpp-constraint library.
+
+You can find the full code in main.cpp
 
 ### Modeling Variables
 ```
