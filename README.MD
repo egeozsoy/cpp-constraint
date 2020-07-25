@@ -6,7 +6,8 @@ A header only CPP Port of the python-constraint: https://github.com/python-const
 Just copy the constraint.hpp file to a desired location and import it via `#include "constraint.hpp"`
 
 ## Toy Example
-Scenario: A Roadtrip
+Scenario: A Roadtrip 
+
 We can take as many backpack with us as we want. Each backpack contains certain items which can be useful. Our goal is to take as few bags as possible, while making sure we got everything.
 
 For every different item we have certain limits.  
